@@ -24,7 +24,7 @@ const Navbar = () => {
         </div>
         <p className='border px-2.5 py-0.5 rounded-full border-gray-500 text-gray-600'>{aToken ? 'Admin' : 'Doctor'}</p>
       </div>
-      <button onClick={logout} className='bg-primary text-white text-sm px-10 py-2 rounded-full'>Logout</button>
+      <button onClick={logout} className='bg-primary text-white text-sm font-bold px-10 py-3 rounded-full'>Logout</button>
     </div>
   )
 }
