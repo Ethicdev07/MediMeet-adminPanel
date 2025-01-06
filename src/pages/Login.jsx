@@ -4,12 +4,15 @@ import { assets } from "../assets/assets";
 import { AdminContext } from "../context/AdminContext";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 const Login = () => {
   const [state, setState] = useState("Admin");
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   const { setAToken, backendUrl } = useContext(AdminContext);
 
@@ -60,15 +63,21 @@ const Login = () => {
           />
         </div>
 
-        <div className="w-full">
+        <div className="w-full relative">
           <p>Password</p>
           <input
             onChange={(e) => setPassword(e.target.value)}
             value={password || ''}
             className="border border-[#DADADA] rounded w-full p-2 mt-1"
-            type="password"
+            type={showPassword ? "text" : "password"}
             required
           />
+            <span
+            onClick={() => setShowPassword(!showPassword)}
+            className="absolute top-[50%] right-5 cursor-pointer text-gray-500"
+          >
+            <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} size="lg" />
+          </span>
         </div>
 
         <button className="bg-primary text-white w-full py-2 rounded-md text-base">

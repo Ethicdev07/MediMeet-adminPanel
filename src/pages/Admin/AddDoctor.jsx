@@ -41,38 +41,38 @@ const AddDoctor = () => {
           <div className="w-full lg:flex-1 flex flex-col gap-4">
 
             <div className="flex-1 flex flex-col gap-1">
-              <p>Doctor Name</p>
+              <p className="text-sm font-semibold text-gray-700">Doctor Name</p>
               <input onChange={(e)=> setDocName(e.target.value)} value={docName} className="border border-gray-600 rounded px-3 py-2" type="text" placeholder="name" required />
             </div>
 
             <div className="flex-1 flex flex-col gap-1">
-              <p>Doctor Email</p>
+              <p className="text-sm font-semibold text-gray-700">Doctor Email</p>
               <input onChange={(e)=> setDocEmail(e.target.value)} value={docEmail} className="border border-gray-600 rounded px-3 py-2"  type="email" placeholder="email" required />
             </div>
 
             <div className="flex-1 flex flex-col gap-1">
-              <p>Doctor Password</p>
+              <p className="text-sm font-semibold text-gray-700">Doctor Password</p>
               <input onChange={(e)=> setDocPassword(e.target.value)} value={docPassword} className="border border-gray-600 rounded px-3 py-2"  type="password" placeholder="password" required />
             </div>
 
             <div className="flex-1 flex flex-col gap-1">
-              <p>Experience</p>
+              <p className="text-sm font-semibold text-gray-700">Experience</p>
               <select onChange={(e)=> setDocExperience(e.target.value)} value={docExperience} className="border border-gray-600 rounded px-3 py-2"  name="" id="">
-                <option value="1 Year">1 Year</option>
-                <option value="2 Year">2 Year</option>
-                <option value="3 Year">3 Year</option>
-                <option value="4 Year">4 Year</option>
-                <option value="5 Year">5 Year</option>
-                <option value="6 Year">6 Year</option>
-                <option value="7 Year">7 Year</option>
-                <option value="8 Year">8 Year</option>
-                <option value="9 Year">9 Year</option>
-                <option value="10 Year">10 Year</option>
+                <option className="text-gray-800" value="1 Year">1 Year</option>
+                <option className="text-gray-800" value="2 Year">2 Year</option>
+                <option className="text-gray-800" value="3 Year">3 Year</option>
+                <option className="text-gray-800" value="4 Year">4 Year</option>
+                <option className="text-gray-800" value="5 Year">5 Year</option>
+                <option className="text-gray-800" value="6 Year">6 Year</option>
+                <option className="text-gray-800" value="7 Year">7 Year</option>
+                <option className="text-gray-800" value="8 Year">8 Year</option>
+                <option className="text-gray-800" value="9 Year">9 Year</option>
+                <option className="text-gray-800" value="10 Year">10 Year</option>
               </select>
             </div>
 
             <div className="flex-1 flex flex-col gap-1">
-              <p>Fees</p>
+              <p className="text-sm font-semibold text-gray-700">Fees</p>
               <input onChange={(e)=> setDocFees(e.target.value)} value={docFees} className="border border-gray-600 rounded px-3 py-2"  type="number" placeholder="fees" required />
             </div>
 
@@ -81,24 +81,24 @@ const AddDoctor = () => {
           <div className="flex-1 flex flex-col gap-4">
 
             <div className="flex-1 flex flex-col gap-1">
-              <p>Speciality</p>
+              <p className="text-sm font-semibold text-gray-700">Speciality</p>
               <select onChange={(e)=> setDocSpeciality(e.target.value)} value={docSpeciality} className="border border-gray-600 rounded px-3 py-2"  name="" id="">
-                <option value="General Physician">General physician</option>
-                <option value="Gynecologist">Gynecologist</option>
-                <option value="Dermatologist">Dermatologist</option>
-                <option value="Pediatricians">Pediatricians</option>
-                <option value="Neurologist">Neurologist</option>
-                <option value="Gastroenterologist">Gastroenterologist</option>
+                <option className="text-gray-800" value="General Physician">General physician</option>
+                <option className="text-gray-800" value="Gynecologist">Gynecologist</option>
+                <option className="text-gray-800" value="Dermatologist">Dermatologist</option>
+                <option className="text-gray-800" value="Pediatricians">Pediatricians</option>
+                <option className="text-gray-800" value="Neurologist">Neurologist</option>
+                <option className="text-gray-800" value="Gastroenterologist">Gastroenterologist</option>
               </select>
             </div>
 
             <div className="flex-1 flex flex-col gap-1">
-              <p>Education</p>
+              <p className="text-sm font-semibold text-gray-700">Education</p>
               <input onChange={(e)=> setDocEducation(e.target.value)} value={docEducation} className="border border-gray-600 rounded px-3 py-2"  type="text" placeholder="Education" required />
             </div>
 
             <div className="flex-1 flex flex-col gap-1">
-              <p>Address</p>
+              <p className="text-sm font-semibold text-gr">Address</p>
               <input onChange={(e)=> setDocAddress1(e.target.value)} value={docAddress1} className="border border-gray-600 rounded px-3 py-2"  type="text" placeholder="address1" required />
               <input onChange={(e)=> setDocAddress2(e.target.value)} value={docAddress2} className="border border-gray-600 rounded px-3 py-2"  type="text" placeholder="address2" required />
             </div>
