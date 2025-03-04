@@ -47,8 +47,6 @@ const AddDoctor = () => {
         console.log(`${key}: ${value}`);
       });
 
-      // console.log("Authorization Token:", aToken);
-
       const { data } = await axios.post(
         `${backendUrl}/api/admin/add-doctor`,
         formData,
