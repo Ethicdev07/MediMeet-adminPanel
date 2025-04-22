@@ -14,18 +14,15 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const { setAToken, backendUrl } = useContext(AdminContext);
-
+ 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
-    
+
     try {
+      if(state === "Admin"){
+        const { data } = await axios.post(`${backendUrl}/api/admin/login`, {email, password});
 
-      if(state === 'Admin'){
-
-        const {data} = await axios.post(`${backendUrl}/api/admin/login`, {email,password});
-     
-
-        if(data.success) {
+        if(data.success){
           localStorage.setItem('aToken', data.token);
           setAToken(data.token);
           toast.success(data.message);
@@ -34,17 +31,26 @@ const Login = () => {
         }else{
           toast.error(data.message);
         }
-
-      }else{
-
       }
-     
       
-    } catch (error) {
-       console.error("API error:", error);
+    }catch (error) {
+      console.error('API ERROR:', error);
+    
+      const message = error.response?.data?.message;
+      console.log("Error message from server:", message);
+    
+      if (message) {
+        toast.error(message, {
+          position: "top-right",
+          autoClose: 2000,
+        });
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
     }
-  };
+  }
 
+ 
   return (
     <form onSubmit={onSubmitHandler} className="min-h-[80vh] flex items-center">
       <div className="flex flex-col gap-3 m-auto  items-start p-8 min-w-[340px] sm:min-w-96 border rounded-xl text-[#5E5E5E] text-sm  shadow-lg">
